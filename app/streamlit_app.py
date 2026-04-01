@@ -181,7 +181,7 @@ def get_test_wallet_data(address):
 @st.cache_resource
 def load_models():
     iso_forest = joblib.load('models/iso_forest_model.pkl')
-    autoencoder = tf.keras.models.load_model('models/autoencoder_model.keras')
+    autoencoder = tf.keras.models.load_model('models/autoencoder_model.h5')
     scaler = joblib.load('models/scaler_features.pkl')
     features_names = joblib.load('models/features_names.pkl')
     threshold = joblib.load('models/autoencoder_threshold.pkl')
